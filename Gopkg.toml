@@ -24,6 +24,13 @@
 #   go-tests = true
 #   unused-packages = true
 
+[[projects]]
+  name = "github.com/rs/xid"
+  version = "v1.2.0"
+
+[[constraint]]
+  name = "github.com/dghubble/sling"
+  version = "v1.1.0"
 
 [[constraint]]
   name = "github.com/labstack/echo"

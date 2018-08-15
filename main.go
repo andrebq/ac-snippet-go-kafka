@@ -11,11 +11,23 @@ import (
 
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
+
+	"flag"
 )
 
 func main() {
 
-	initPubSub()
+	kafkaAddr := flag.String("broker", "localhost:9092", "Kafka broker")
+	help := flag.Bool("h", false, "Show Help")
+
+	flag.Parse()
+
+	if *help {
+		flag.Usage()
+		os.Exit(1)
+	}
+
+	initPubSub(*kafkaAddr)
 	ctx := watchSigKill(context.Background())
 
 	go printGlobalInbox(ctx)

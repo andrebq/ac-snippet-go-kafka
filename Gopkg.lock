@@ -2,10 +2,22 @@
 
 
 [[projects]]
+  name = "github.com/dghubble/sling"
+  packages = ["."]
+  revision = "eb56e89ac5088bebb12eef3cb4b293300f43608b"
+  version = "v1.1.0"
+
+[[projects]]
   name = "github.com/dgrijalva/jwt-go"
   packages = ["."]
   revision = "06ea1031745cb8b3dab3f6a236daf2b0aa468b7e"
   version = "v3.2.0"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/google/go-querystring"
+  packages = ["query"]
+  revision = "53e6ce116135b80d037921a7fdd5138cf32d7a8a"
 
 [[projects]]
   name = "github.com/labstack/echo"
@@ -52,6 +64,12 @@
   revision = "48c37f796910d8154479aaa04ade5843ae4f55d0"
 
 [[projects]]
+  name = "github.com/sirupsen/logrus"
+  packages = ["."]
+  revision = "3e01752db0189b9157070a0e1668a620f9a85da2"
+  version = "v1.0.6"
+
+[[projects]]
   branch = "master"
   name = "github.com/valyala/bytebufferpool"
   packages = ["."]
@@ -68,7 +86,8 @@
   name = "golang.org/x/crypto"
   packages = [
     "acme",
-    "acme/autocert"
+    "acme/autocert",
+    "ssh/terminal"
   ]
   revision = "de0752318171da717af4ce24d0a2e8626afaeb11"
 
@@ -84,6 +103,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "02c35af56b7167738a6af495799abac19e384cfff8afaff545dbf959ee9ceee6"
+  inputs-digest = "b898b5762c2e9d04a7366ed36fbfc20526ca04d36dfb773ecc71b19e9f97c854"
   solver-name = "gps-cdcl"
   solver-version = 1

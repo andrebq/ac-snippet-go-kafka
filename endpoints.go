@@ -37,7 +37,7 @@ func channelPost(e echo.Context) error {
 	}
 
 	e.Response().Header().Add("Location", fmt.Sprintf("//messages/%v", newMessage.ID))
-	e.String(http.StatusOK, newMessage.ID)
+	e.String(http.StatusCreated, newMessage.ID)
 	return nil
 }
 

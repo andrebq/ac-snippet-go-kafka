@@ -1,3 +1,5 @@
 vendor
 ac-snippet-go-kafka
 ac-snippet-go-kafka.exe
+tools/post-msg/post-msg
+tools/post-msg/post-msg.exe

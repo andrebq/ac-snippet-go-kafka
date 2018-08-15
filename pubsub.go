@@ -19,14 +19,17 @@ var (
 	writers map[string]*writer
 
 	writerLock sync.Mutex
+
+	kafkaBrokerAddr string
 )
 
-func initPubSub() {
+func initPubSub(brokerAddr string) {
 	writers = make(map[string]*writer)
+	kafkaBrokerAddr = brokerAddr
 }
 
 func getBrokers() []string {
-	return []string{"localhost:9092"}
+	return []string{kafkaBrokerAddr}
 }
 
 func getWriter(topic string) *writer {
